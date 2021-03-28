@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BullsAndCows
 {
@@ -62,14 +63,13 @@ namespace BullsAndCows
             {
                 if (!RepeatDig(i)) l.Add(i);
             }
-            Console.WriteLine(l.Count);
             do
             {
                 number = l[0];
-                Console.WriteLine("Това ли е числото {0}", number);
-                Console.Write("Колко бика имам? - ");
+                Console.WriteLine("Is this the number {0}", number);
+                Console.Write("How many bulls - ");
                 biks = int.Parse(Console.ReadLine());
-                Console.Write("Колко крави имам? - ");
+                Console.Write("How many cows - ");
                 kravs = int.Parse(Console.ReadLine());
                 foreach (int x in l)
                 {
@@ -85,5 +85,7 @@ namespace BullsAndCows
                 Console.WriteLine(l.Count);
             } while ((l.Count > 0) && (biks != 4));
         }
+       
+
     }
 }
